@@ -6,6 +6,18 @@ their inputs, native tool calls, mathematical checks and measurements.
 The [library](https://github.com/erikmnovak/TamerOp.jl) and
 [website](https://github.com/erikmnovak/TamerOp-site) have separate repositories.
 
+## Questions and contributions
+
+We keep issues and discussions for the library, website and benchmarks together
+in the main TamerOp.jl repository. Report problems and propose changes in the
+[issue tracker](https://github.com/erikmnovak/TamerOp.jl/issues). For a problem
+reproducing a benchmark, include the study name, command, software versions and
+the output you received. For questions about the comparisons, methods or
+results, use [Discussions](https://github.com/erikmnovak/TamerOp.jl/discussions).
+
+Pull requests that change a study or its execution tools belong in this
+repository. Link the corresponding issue in TamerOp.jl when there is one.
+
 ## Run a study
 
 Use Python 3.12 and Julia 1.12.1 on Linux. Each study records its additional
