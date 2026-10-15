@@ -1,0 +1,17 @@
+{
+  "README.md": "41d009ef07f0f446f4edef654140cbd08eb1daf0f64e51857edbd8bc44bfeb01",
+  "driver.py": "479cc62c0e58f8966f85d88cf7b916aa37b3b37e31ceae10d9ac4ce8c339766c",
+  "harness/LICENSE": "a72dffb06140fdfdf45363916ec3d552983c1de2314e2d6ea612ad3f7ac86509",
+  "harness/cubicalripser/large_analyze.py": "82428b9345f4cb7fb88a4c63c5546cce2e4fded1721df52cac3029f7e04ea9e0",
+  "harness/cubicalripser/large_julia.jl": "d397265e14a4c27ef7fcd65acda29bf489c5ad18006f02b298e3394a78781665",
+  "harness/cubicalripser/large_outputs.py": "ec8fd48c3df16e023c2ed6e13d053d75d0504837ca8edfab4cfa9d54c8d21ead",
+  "harness/cubicalripser/large_python.py": "93358a13addff9ff964c73aaf37cb298345702fca88cc22ae49b30ef0a959629",
+  "harness/cubicalripser/large_study.py": "30fa92b3af066ed01d2c34d192c2c38552b16b175d18151185ac609f38c4f8dd",
+  "harness/cubicalripser/mathematics.py": "e7b6e3227b7aa2a6c55fdade8be13cdb9ad2cf5d7215e63223f673ebeb5d705b",
+  "harness/cubicalripser/prepare.py": "559bf3e3153dac5fd2bf0ad74ef6a626b66999d145134d91adb4efcab5a2d50c",
+  "harness/cubicalripser/protocol.py": "9650c34a9ab83a844475cb23225895badf815905329bab061bfda415f64383c3",
+  "harness/cubicalripser/run.py": "2377d06218510c05533aefc8a9046d4d736cd9b389ea1084124c4d3c68bf9ad2",
+  "harness/phat/oracle.py": "d107d6028ab99f4eb47ea0bc4686dc90a9a26d329209e67008a6808891d83efa",
+  "prepare_inputs.py": "f60f4343ada1e087c9fce840137463d0457cf35f6de117eac1c368272a7c4d8e",
+  "source_manifest.json": "1e54de027c56398fe7f15ca693e178c662c07414c418d81365483517b5f6b902"
+}

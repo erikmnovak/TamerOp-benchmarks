@@ -1,0 +1,7 @@
+AGENTS.md
+audit/
+_work/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

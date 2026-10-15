@@ -1,0 +1,6 @@
+{
+  "candidate_id": "qpa-v1-529681519b5d1b40",
+  "original_snapshot_sha256": "7c20bde87eb3f46350d63bd6fdd1dc6319a4f102855ef17e5a9923f9bd35e538",
+  "selected_package_files": 140,
+  "relocation": "payload.json maps unchanged selected harness/input bytes into the original relative layout under the new work directory"
+}

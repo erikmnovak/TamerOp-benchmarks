@@ -1,0 +1,17 @@
+{
+  "name": "tamerop-browser-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:plan": "node verify-plan.mjs",
+    "test:offline": "playwright test --config=portable-session.config.mjs",
+    "test:headed": "playwright test --headed",
+    "test:docs": "node documentation.mjs"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "0.0.83",
+    "@playwright/test": "1.63.0",
+    "playwright": "1.63.0"
+  }
+}

@@ -1,0 +1,2 @@
+# Preparation uses a Python 3.12 standard-library driver. Each study installs
+# its recorded numerical dependencies into a separate environment under _work/.

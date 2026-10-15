@@ -1,0 +1,212 @@
+{
+  "payload/support/qpa_diversity/generate_fixtures.py": {
+    "path": "audit/2026-09-27/qpa_diversity/generate_fixtures.py",
+    "sha256": "48658638f44c50c461049f9227dd789393bb2c6edcd98bcf5cb66ff9b4e0c2e7",
+    "gzip": false
+  },
+  "payload/support/qpa_large_diversity/generate_fixtures.py": {
+    "path": "audit/2026-09-27/qpa_large_diversity/generate_fixtures.py",
+    "sha256": "b60761de9c961e65aeb7804424994f012e363ad9c8326f14897701e5f5f5d5af",
+    "gzip": false
+  },
+  "payload/inputs/base_pairs.json.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/base_pairs.json",
+    "sha256": "868b043dce40404d75a222d81bdfe27f1389990d40a8eb39e91851af69f5f2f5",
+    "gzip": true
+  },
+  "payload/inputs/core/fixtures.g.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/core/fixtures.g",
+    "sha256": "2ae8825b84c6e2d4aba393db9ec5cbe5ca581cc92f75d1a8de008d8e60b476e9",
+    "gzip": true
+  },
+  "payload/inputs/core/fixtures.json.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/core/fixtures.json",
+    "sha256": "a9e40b01674d51ac0e7613f5ea8d0fb9d751b1ef91c12154bdc67470ba1da3a3",
+    "gzip": true
+  },
+  "payload/inputs/coverage.csv.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/coverage.csv",
+    "sha256": "48385e2d9c78d6dfff54a0d43f5f30198f9a08651ad679db3917c076eed12bf3",
+    "gzip": true
+  },
+  "payload/inputs/diagrams/fixtures.g.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/diagrams/fixtures.g",
+    "sha256": "ad1196431a564b82367d5855bf9bf5e1980acd998805209b42016a94a5f2a257",
+    "gzip": true
+  },
+  "payload/inputs/diagrams/fixtures.json.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/diagrams/fixtures.json",
+    "sha256": "c9a3ea68dcfd861f1b61adca77d2d3af8a5d0b68714758fbd514dc04435aea86",
+    "gzip": true
+  },
+  "payload/inputs/integrated/derived_fixtures.g.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/integrated/derived_fixtures.g",
+    "sha256": "6e0990b87db149cd31b249d47e212868458e4be8a6c2533c70d04f93b2f31103",
+    "gzip": true
+  },
+  "payload/inputs/integrated/derived_fixtures.json.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/integrated/derived_fixtures.json",
+    "sha256": "bd4e965c29b0b72545c0ac111d6e5972f8e1a1a9685013622f6a72f0a369a5e7",
+    "gzip": true
+  },
+  "payload/inputs/manifest.json.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/manifest.json",
+    "sha256": "96fdf54fdeb76eb146d2fcb426dd141bc20c1ef1fd7b2f4d24245de1a8063337",
+    "gzip": true
+  },
+  "payload/inputs/scope.json.gz": {
+    "path": "audit/2026-09-27/qpa_suite_v1/scope.json",
+    "sha256": "2ac592631571854ff3d8adea19f85cf44b9c2ba4619ed79bf9655aa9fe17e971",
+    "gzip": true
+  },
+  "payload/benchmark/qpa_core/DIAGRAMS.md": {
+    "path": "benchmark/qpa_core/DIAGRAMS.md",
+    "sha256": "7083d5c6b8297f0e41419b4575891e02a2e91454826ee58ba495dfda4595d9de",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/README.md": {
+    "path": "benchmark/qpa_core/README.md",
+    "sha256": "d3a9695e62a76c33f2fb29fc82461953fd1d18a854990eceb42def5575546c8b",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/check_diagram_inputs.py": {
+    "path": "benchmark/qpa_core/check_diagram_inputs.py",
+    "sha256": "3f23d88e82ce03490d14fe4cb1dd521bbfea9ea90995065cc8c1cacb53336c8c",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/diagrams.g": {
+    "path": "benchmark/qpa_core/diagrams.g",
+    "sha256": "b226111f2510be6dde3fba90cd7e42f1562442e8752aff3b8bb0f2b42a8cc471",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/diagrams.jl": {
+    "path": "benchmark/qpa_core/diagrams.jl",
+    "sha256": "d51ca133b19aac6681c4233b1c7e9795dac138d207479c446ee1d63a5ada2db2",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/diagrams.py": {
+    "path": "benchmark/qpa_core/diagrams.py",
+    "sha256": "f9ac80addfe1bac67c1e6194da3f3e153e935438ce10e66ee19305945aeb315a",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/exact_rref.py": {
+    "path": "benchmark/qpa_core/exact_rref.py",
+    "sha256": "79d8848114b720cd743a2355fcc54b48c63ebea5890575c7a0b8ad353a40a1d8",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/generate.py": {
+    "path": "benchmark/qpa_core/generate.py",
+    "sha256": "bc40c551424a10a8e6bb5740d02b35a7c3cca0fbb0002b3ae9aaa7d270c4d5ab",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/qualify_diagrams.py": {
+    "path": "benchmark/qpa_core/qualify_diagrams.py",
+    "sha256": "e9b8f9ff1960760b2f44ae0a3415c2bc64e722c0a2c6b3819353798e601edb9a",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/run.py": {
+    "path": "benchmark/qpa_core/run.py",
+    "sha256": "3a7a0198cd4fabab13c1da9d179e4663f997ca4743d496a92d94638c45d690a6",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/test_diagrams.py": {
+    "path": "benchmark/qpa_core/test_diagrams.py",
+    "sha256": "b272c0917063ab6fc59cf90e8cbebaef3af7142af0fe9d224609569da25615cd",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/test_exact_rref.py": {
+    "path": "benchmark/qpa_core/test_exact_rref.py",
+    "sha256": "bebefdaa82710fd571a0d394a2fd0d3133c90d0b42cadeb2e7810529f5d4ba82",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/test_validator.py": {
+    "path": "benchmark/qpa_core/test_validator.py",
+    "sha256": "5ddece5c5e236d8ec479916c8ae157d1952fcd59ce4e2a5580bb6f2441bfffd4",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/verify.py": {
+    "path": "benchmark/qpa_core/verify.py",
+    "sha256": "bc567cd556050cbf00405087ff5dd2adb543fef0b65b551d170d94cfa14cfaf7",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/worker.g": {
+    "path": "benchmark/qpa_core/worker.g",
+    "sha256": "4a2ec0a5a635cb66ca03f0513cd16d05b60e5ebc7803f900b28b5bb30e4357a2",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_core/worker.jl": {
+    "path": "benchmark/qpa_core/worker.jl",
+    "sha256": "f18b7b5d5f5ce73a7d160cbbbd87851f93956d9c959d31e36a4f9db4c14d8335",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/README.md": {
+    "path": "benchmark/qpa_derived/README.md",
+    "sha256": "47898f22353e4dc98d0bab96bcae0b58603b1f886f49fecea43f1cfe535a2afe",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/generate.py": {
+    "path": "benchmark/qpa_derived/generate.py",
+    "sha256": "d93478ef13220e04b73e1d6f66ae8984e7a7ef626540d367bbad6113ce5d3870",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/run.py": {
+    "path": "benchmark/qpa_derived/run.py",
+    "sha256": "15f6448479dbb2bf74513e89bc5672246b2faf0309065f3fdbc486d5ddd90ab8",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/tensor_reproducer.g": {
+    "path": "benchmark/qpa_derived/tensor_reproducer.g",
+    "sha256": "149cb809a9692e1ff9d26d718211d0d9ad1ffdea5f9cd568010b4da752afdaca",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/test_runner.py": {
+    "path": "benchmark/qpa_derived/test_runner.py",
+    "sha256": "9366cc4d066dc1391f5b30ded37932ce467eb133e634f0849f870515610e4d67",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/test_validator.py": {
+    "path": "benchmark/qpa_derived/test_validator.py",
+    "sha256": "d389e5072d22638a046a5b52b818df46fc0717a976437ff4e874a0ece0ee4a39",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/verify.py": {
+    "path": "benchmark/qpa_derived/verify.py",
+    "sha256": "99f43ce2d814edfdb29f7d0ea1cda6377b0e62dc3c241b8844f3b9585f6578f1",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/worker.g": {
+    "path": "benchmark/qpa_derived/worker.g",
+    "sha256": "d1239ad4fab0e1a57377878a666c030d53936a47ec55a87108ae4ee2e3637dee",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_derived/worker.jl": {
+    "path": "benchmark/qpa_derived/worker.jl",
+    "sha256": "85a7d5d98bb2cff6067ccdd911d02142e298bfdb3ea2df17480b07c8843a95fc",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_diversity.jl": {
+    "path": "benchmark/qpa_diversity.jl",
+    "sha256": "f9742ca8f6c568e6ba63af99796558c441e3554a466c3f821cc541db2064457a",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_suite/clock/preflight.g": {
+    "path": "benchmark/qpa_suite/clock/preflight.g",
+    "sha256": "46f0c3e9da087ee6249afd6d32fbd61148c38780e3f128906241f9df46cb70d4",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_suite/fixtures.py": {
+    "path": "benchmark/qpa_suite/fixtures.py",
+    "sha256": "56c47c9d101cbab1b4aa7d1bcd110ed1bf9eecda350ffac2eede401d36aeaec1",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_suite/integrate.py": {
+    "path": "benchmark/qpa_suite/integrate.py",
+    "sha256": "5dccb1cc4d09cd6f59a441318ae65831524eccc7444ffc9e795334cb4847e5ea",
+    "gzip": false
+  },
+  "payload/benchmark/qpa_uncached.jl": {
+    "path": "benchmark/qpa_uncached.jl",
+    "sha256": "94418a20349fec4f8681395fb6fa19b90180b59fa3a428aeaf7e278807dd3b4a",
+    "gzip": false
+  }
+}
