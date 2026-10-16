@@ -56,6 +56,11 @@ For a tool change, describe the problem and test the affected command on a
 small case. A change to mathematical validation needs a known answer or an
 independent check. Rewriting instructions does not require a new timing campaign.
 
+For a new study, a correction or a significant change to reproduction, add a
+short entry to the [changelog](CHANGELOG.md). Name the affected study and version,
+explain what changed and whether it affects the recorded results, and link the
+relevant instructions or evidence. Routine wording edits need no entry.
+
 ## Review and related projects
 
 Erik Novak reviews proposals, agrees the comparison's scope and integrates
