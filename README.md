@@ -3,20 +3,23 @@
 This repository contains the executable studies behind the
 [TamerOp benchmark reports](https://www.tamerop.com/benchmarks/index.html):
 their inputs, native tool calls, mathematical checks and measurements.
-The [library](https://github.com/erikmnovak/TamerOp.jl) and
-[website](https://github.com/erikmnovak/TamerOp-site) have separate repositories.
+The three projects have separate repositories and work together:
+
+| Project | What it contains |
+| --- | --- |
+| [TamerOp.jl](https://github.com/erikmnovak/TamerOp.jl/blob/main/README.md) | The Julia library, examples and tests |
+| [TamerOp-site](https://github.com/erikmnovak/TamerOp-site/blob/main/README.md) | Lessons, guides and benchmark reports for [tamerop.com](https://www.tamerop.com) |
+| TamerOp-benchmarks | Runnable comparisons, pinned sources and measurement evidence |
 
 ## Questions and contributions
 
-We keep issues and discussions for the library, website and benchmarks together
-in the main TamerOp.jl repository. Report problems and propose changes in the
-[issue tracker](https://github.com/erikmnovak/TamerOp.jl/issues). For a problem
-reproducing a benchmark, include the study name, command, software versions and
-the output you received. For questions about the comparisons, methods or
-results, use [Discussions](https://github.com/erikmnovak/TamerOp.jl/discussions).
-
-Pull requests that change a study or its execution tools belong in this
-repository. Link the corresponding issue in TamerOp.jl when there is one.
+Questions about methods and results go to
+[Discussions](https://github.com/erikmnovak/TamerOp.jl/discussions); report
+problems and propose studies in the shared
+[issue tracker](https://github.com/erikmnovak/TamerOp.jl/issues). Pull requests
+for benchmark changes belong here. [Contributing](CONTRIBUTING.md) explains
+how to submit measurements from your computer, propose a comparison or improve
+the tools.
 
 ## Run a study
 
@@ -59,6 +62,9 @@ The website's [reproduction recipe](https://www.tamerop.com/recipes/reproduce_be
 walks through the commands and explains the resulting files.
 The [measurement account](https://www.tamerop.com/contributing/benchmarking.html)
 explains the timing boundaries, validation and statistics.
+For designing a comparison, use the [study protocol](PROTOCOL.md). The
+[qualification designs](STUDY_DESIGNS.md) preserve the mathematical questions
+and findings for PersistenceDiagrams.jl and Skyscraper-Invariant.
 
 ## Files and versions
 
@@ -78,4 +84,5 @@ the saved observations show how long it took on your machine.
 The report figures and their presentation code belong to TamerOp-site. The
 website publishes copies of the historical evidence so a report and its
 downloads remain together. A report identifies the benchmark revision used;
-new measurements receive a new study version instead of replacing old data.
+changes to published inputs, methods or evidence receive a new study version
+instead of replacing old data.

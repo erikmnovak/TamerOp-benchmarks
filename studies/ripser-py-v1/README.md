@@ -6,6 +6,30 @@ the inputs used in the [report](https://www.tamerop.com/benchmarks/ripser.html).
 They include dense and sparse distances, weighted vertices, point clouds,
 landmark selection and requests retaining representative cocycles.
 
+## Scientific scope
+
+The fixed requests distinguish barcode output from cocycle output and include
+F₂, F₃ and F₁₀₁. Supplied distance grades are exactly representable in the
+comparator's Float32 conversion; native point clouds have a separately declared
+rounding tolerance. Complete interval multisets, essential bars and landmark
+metadata are checked. Small cases use independent boundary reduction and graph
+homology. Cocycles are compared as mathematical classes, not by requiring equal
+coefficient arrays.
+
+Large connected H₂ witnesses receive an independent sparse coboundary check.
+The verifier samples at most six longest cocycles in positive degrees; it does
+not check every returned cochain or identify every large basis across programs.
+The six reserved requests were evaluated after the candidate freeze, with no
+further optimization. Development and evaluation results remain distinct.
+
+The [archived development record](https://github.com/erikmnovak/TamerOp-site/blob/4b261c955cf31be0cb9c0e59ad5e333615795eb2/docs/benchmark_suites.md#ripserpy-development-scope-2026-10-04)
+preserves the pilot, rejected alternatives, confounded observations and losses
+on landmarks and small controls. Its
+[closure entry](https://github.com/erikmnovak/TamerOp-site/blob/4b261c955cf31be0cb9c0e59ad5e333615795eb2/docs/benchmark_suites.md#ripserpy-v1-final-confirmation-and-closure-2026-10-05)
+records the resolution of the sampled H₂ check and the final fixed comparison.
+
+## Reproduce the study
+
 Run these commands from the repository root on Linux with Python 3.12 and
 Julia 1.12.1 installed:
 

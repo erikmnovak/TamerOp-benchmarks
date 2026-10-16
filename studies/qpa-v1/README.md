@@ -6,6 +6,41 @@ TamerOp snapshot and the original mathematical adapters and exact validators.
 The 200 completed comparisons and QPA's 20 tensor evaluation failures remain
 separate outcomes. A failed request receives no speed ratio.
 
+## Scientific scope
+
+The fixed suite has 184 development requests and 36 requests reserved before
+the candidate freeze, over QQ, F₂, F₃ and F₁₀₁. It covers Hom bases, Ext
+dimensions and representatives, kernels, images and cokernels, projective and
+injective resolutions, pushouts and pullbacks, homology and mapping cones,
+Yoneda products, induced Ext maps, and balanced tensor products with elementary
+evaluations. The exact cases, requested outputs and original weights remain in
+the frozen inputs and [result data](evidence/README.md).
+
+The primary timer directly measures native construction and the complete query
+from the declared prepared finite category and decoded input. Category
+construction, scalar decoding, loading and compilation are outside that boundary.
+Each sample starts without results from an earlier mathematical query. Outputs
+are checked through bases, maps, representatives or evaluations as required by
+the request, rather than dimensions alone.
+
+Five paired process passes with three accepted samples per request preserve
+the original suite weights and 10% practical margin. All 220 requests remain in
+the completion denominator; the 200 matched requests account for 90% of its
+original weight. The twenty QPA tensor evaluation failures include four reserved
+requests. Their absence from speed aggregates does not remove them from the
+study. Construction alone can have a valid timing even when the final query
+fails.
+
+The original combined allowance was 15 hours; the final campaign and initial
+report used 9.46 hours of the remaining allowance. The recorded findings describe
+the fixed synthetic inputs and the shared computer used for measurement.
+The [archived development account](https://github.com/erikmnovak/TamerOp-site/blob/4b261c955cf31be0cb9c0e59ad5e333615795eb2/docs/benchmark_suites.md#qpa-results-and-development-record)
+preserves the earlier nonmonotonic GAP pilot, interrupted attempts, accepted
+small regressions and optimization decisions. The final study uses the checked
+monotonic GAP build; earlier pilot observations are not pooled with confirmation.
+
+## Reproduce the study
+
 Run commands from the benchmark repository root on Linux, with Python 3.12 or
 later and Julia 1.12.1 available. Preparation restores the pinned Julia
 environment and builds GAP 4.16.1 with QPA 1.37 from the pinned sources:
