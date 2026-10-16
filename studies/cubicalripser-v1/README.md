@@ -4,6 +4,45 @@ This study computes complete ordinary barcodes from the same scalar arrays in
 TamerOp and CubicalRipser 0.0.37. The retained evidence is the 11 October 2026
 comparison. New runs write their inputs, checks and measurements under `_work/`.
 
+## Scientific scope
+
+The 48 fixed requests cover two and three dimensions, vertex and top cell input,
+and noisy, binary and smooth arrays. Each combination has three regular sizes
+and one reserved asymmetric input. Vertex input assigns a cell the maximum of
+its vertex values; top cell input assigns a face the minimum of its incident
+top cells. The two conventions define different filtrations. The requested
+answers contain H₀–H₁ in two dimensions and H₀–H₂ in three dimensions over F₂,
+with nonperiodic boundaries.
+
+The primary timer starts with the loaded Float64 array and includes conversion,
+cubical construction and complete native output. Every result retains exact
+interval multiplicities. The frozen study uses three process passes, three
+accepted samples per request and tool, an 8 GiB process memory cap, a 180 second
+phase timeout, a 30 minute worker timeout and a four hour campaign cap. That
+campaign cap was amended before launch from an estimate of about three hours.
+The [task freeze](evidence/TASK_FREEZE.json) and
+[input manifest](evidence/formal_manifest.json) retain the exact specification.
+
+Qualification preserves the failed singleton-axis controls in the selected
+0.0.37 build. Earlier qualification of 0.0.36 also found failures in its optional
+`top_dim=True` route and a distinction between returned birth cycles and generators
+that persist through the assigned intervals. The formal comparison requests
+full barcodes; representative cycles and that shortcut receive no timing claim.
+Other fields, periodic boundaries and dimensions outside the qualified scope
+remain separate mathematical requests.
+
+The larger binary calibration remains in [calibration.json](evidence/calibration.json).
+At 160 cubed, vertex input took 112.56 seconds in TamerOp and 14.61 seconds in
+CubicalRipser. For top cell input TamerOp took 1.307 seconds while CubicalRipser
+timed out during warmup, leaving no valid ratio. The fixed smaller binary ladder
+preserves those outcomes as separate calibration evidence. The
+[archived development account](https://github.com/erikmnovak/TamerOp-site/blob/4b261c955cf31be0cb9c0e59ad5e333615795eb2/docs/benchmark_suites.md#cubicalripser-completed-comparison)
+also preserves construction, storage and table experiments, including rejected
+variants, host variation and accepted noisy-input regressions. Formal closure
+did not claim that every remaining binary-vertex cost was minor.
+
+## Reproduce the study
+
 Run these commands from the benchmark repository root:
 
 ```sh

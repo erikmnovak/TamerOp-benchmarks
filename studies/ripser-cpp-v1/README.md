@@ -6,6 +6,13 @@ requests in the [report](https://www.tamerop.com/benchmarks/ripser_cpp.html):
 two sizes each of circles, planar distances over two fields, spheres and
 sparse spheres.
 
+The [original scope and closure](https://github.com/erikmnovak/TamerOp-site/blob/4b261c955cf31be0cb9c0e59ad5e333615795eb2/docs/benchmark_suites.md#original-c-ripser-companion-study-2026-10-06)
+retain the shared-machine conditions, two earlier memory failures and the
+upstream sparse-cutoff failure. Cocycles, landmarks, weighted vertex births and
+raw-cloud distance construction are outside this comparison. The executable's
+printed dyadic grades are uniquely decoded before exact barcode comparison;
+ratios from the separate Ripser.py study are not transferred to this one.
+
 From the repository root on Linux, with Python 3.12, Julia 1.12.1, Git and a
 C++11 compiler installed:
 

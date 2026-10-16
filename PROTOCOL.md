@@ -8,16 +8,13 @@ question, or return to something already computed?
 Read this manual before planning, changing or reporting a benchmark. It governs
 new optimization and cross-software comparisons. The [finite-encoding
 introduction](https://www.tamerop.com/finite_encodings.html) explains the central object; the
-[testing guide](https://www.tamerop.com/contributing/testing.html) explains correctness checks. Each archived study retains the protocol under which its measurements were taken.
+[library testing guide](https://github.com/erikmnovak/TamerOp.jl/blob/main/test/README.md) explains correctness checks. Each archived study retains the protocol under which its measurements were taken.
 
-Before choosing further experiments, use [Designing a comparison that can
-finish](https://www.tamerop.com/contributing/benchmark_suites.html). Freeze a finite suite, its intended claim and
-completion criteria. Existing adequate evidence earns credit; another possible
-input size or operation does not automatically extend the current study.
-
-The [comparison roadmap](https://www.tamerop.com/contributing/benchmark_suites.html#planned-competitor-comparisons)
-records intended overlap and scope checks for further comparisons. Consult it
-when choosing the next study, alongside this repository's completed studies.
+Before choosing experiments, [design a bounded suite](#design-a-bounded-suite):
+fix its intended claim, inputs and completion criteria. Existing adequate
+evidence earns credit. The [study instructions](README.md#choose-a-comparison)
+identify each runnable comparison; [qualification designs](STUDY_DESIGNS.md)
+record the common outputs and checks for two further comparisons.
 
 **The primary measure of computational efficiency is compiled code performing
 the requested mathematics without reusing results from an earlier query.**
@@ -36,14 +33,14 @@ package. Preserve losses and coverage gaps: they identify what to improve next.
 
 | Task | Start here |
 | --- | --- |
-| Set the scope and decide when to stop | [Design a bounded suite](https://www.tamerop.com/contributing/benchmark_suites.html) |
+| Set the scope and decide when to stop | [Design a bounded suite](#design-a-bounded-suite) |
 | Plan the comparison | [Define the question and output](#define-the-question-and-output) |
 | Choose what to compare first | [Prioritize complete mathematical workflows](#prioritize-complete-mathematical-workflows) |
 | Measure actual computation | [Measure compiled code with uncached mathematics](#measure-compiled-code-with-uncached-mathematics) |
 | Investigate first use | [Measure and improve compilation](#measure-and-improve-compilation) |
 | Diagnose storage | [Measure memory separately](#measure-memory-separately) |
 | Explain what the timings mean | [Practical significance and presentation](#practical-significance-and-presentation) |
-| Style a public report and its figures | [Shared report template and figures](https://www.tamerop.com/contributing/benchmark_style.html) |
+| Regenerate report figures | [Plotting tools](https://github.com/erikmnovak/TamerOp-site/blob/main/docs/build_scripts/BENCHMARK_FIGURES.md) |
 | Plan a reproducible release | [Preserve and release the evidence](#preserve-and-release-the-evidence) |
 | Begin a study | [Study brief and completion checks](#study-brief-and-completion-checks) |
 
@@ -57,24 +54,13 @@ gives the common commands for verifying, preparing and running each study.
 
 ## Practical significance and presentation
 
-Write from the perspective of someone considering TamerOp: lead with its
-demonstrated strengths and explain what the timings mean for their work.
-A count of wins and losses is supporting evidence, not the main conclusion.
-It gives a microsecond edge and a saving of several seconds the same visual
-importance. Lead instead with the magnitude of the difference, actual runtimes,
-input sizes and the workflows where the benefit matters.
+Explain the measured difference through actual runtimes, input sizes and the
+workflows where the saving matters. Counts of wins and losses are supporting
+evidence: they give a microsecond edge and a saving of several seconds the
+same weight unless the declared workload says otherwise.
 
-For close comparisons, say that performance is similar, then state the measured
-edge. A modest TamerOp improvement can lead the sentence; a modest competitor
-improvement can follow the statement of comparable performance. For example:
-
-| Measured times | Suggested wording |
-| --- | --- |
-| TamerOp 1.1 s; competitor 1.2 s | TamerOp used about 8% less time; both completed the request in roughly a second. |
-| TamerOp 1.2 s; competitor 1.1 s | Performance was similar, with the competitor slightly faster: 1.1 s versus TamerOp's 1.2 s, about 8% less time. |
-
-This emphasis should carry through headlines, tables, captions, summaries and
-the website. Use the same practical band for both tools. Keep the suite's
+For close comparisons, describe the times as similar and state the measured
+edge. Apply the same practical margin to both tools. Keep the suite's
 predeclared thresholds, weights, denominators and claim criteria unchanged;
 do not move the boundary after seeing a result. The usual band is a speed ratio
 from 1/1.10 to 1.10. Prefer “similar” in prose and “within the practical band”
@@ -97,9 +83,171 @@ less time, not 10%. Prefer “less time” or “× as fast” over an ambiguous
 percentage “faster.” Editorial revisions may improve the explanation without
 rerunning benchmarks or altering the measurements and their sealed evidence.
 
-Use the [benchmark visual style](https://www.tamerop.com/contributing/benchmark_style.html) for page layout, tables,
-colors, typography and exported figures. QPA is the aesthetic reference;
-different comparisons can use different plot types within that shared style.
+The website owns report presentation. Its [plotting instructions](https://github.com/erikmnovak/TamerOp-site/blob/main/docs/build_scripts/BENCHMARK_FIGURES.md) explain how to regenerate figures from the recorded observations.
+
+## Design a bounded suite
+
+Choose the mathematical question and permitted conclusion before selecting
+cases. A study of one task supports a conclusion about that task; a suite of
+several justified workflows can support a broader empirical comparison. Timing
+uncertainty concerns repeated execution of those inputs. It does not measure
+how representative the inputs are of every research application.
+
+### Select tasks and inputs
+
+Start with a bounded review of the documented public interfaces. Record the
+natural overlap, choose the application area and identify deferred, unsupported
+or unresolved requests. Usually three to six workflow families give a useful
+scope. A specialist with a narrow overlap may need fewer. Group related requests
+before assigning weights: several Hom and Ext outputs can share an algebra
+family rather than receiving extra weight merely because they have more variants.
+
+Use the following design defaults, adjusting them for a stated reason:
+
+| Part of the suite | Purpose and usual size |
+| --- | --- |
+| Mathematical controls | A few known answers per relevant family, including empty inputs and conventions |
+| Representative inputs | Two to four justified structural families |
+| Scaling inputs | Three fixed levels for selected families |
+| Difficult inputs | A declared selection of dense, adverse or boundary cases |
+| Reserved evaluation inputs | About 15–20% of cases selected before optimization |
+| Startup and memory | Selected cases or compatible existing evidence, measured separately |
+
+These roles need not form a Cartesian product. A coverage matrix should exercise
+each primary task and major input class, with combinations chosen to test
+plausible interactions. About 20–40 task cases per family is a useful starting
+point; extra necessary output variants keep the family's original weight.
+Explain omitted combinations and record actual matrix and output sizes.
+
+Use application data when available. For synthetic evidence, explain how the
+families relate to the intended mathematics. API counts do not establish how
+frequently researchers use each operation. Stop each size ladder at its fixed
+endpoint or resource cap. A loss or absence of a crossover does not extend the
+ladder. Correct a ladder that fails its declared design, such as accidentally
+identical sizes, before confirmation and record the amendment.
+
+### Freeze selection and repetitions
+
+The suite manifest names every scored case, family, input recipe or hash,
+requested output, primary timer, weight and eligibility check. Distinguish
+previously measured development inputs from unseen evaluation cases. A later
+selection cannot retroactively preregister earlier measurements.
+
+Use the pilot to check mathematical answers, feasibility, warmup and timer
+precision, then freeze any amendments. Do not use pilot rankings to discard
+unfavorable structures or change their weights. The default confirmation uses
+five paired process passes and three independently reset samples per tool and
+case in each pass. Both tools run serially in each block, with reversed or
+randomized order. A pilot may justify different fixed counts; record them
+before confirmation and retain uncertainty when that budget is exhausted.
+
+Use process medians and preserve the dependence among cases measured in the
+same process or block. One analysis option is an approximate 95% t interval on
+independent block log ratios, together with the pass range. Record its assumptions
+and any small sample limitation, or freeze another justified method. Extra
+samples cannot remove systematic background load or settle input representativeness.
+
+Existing compatible evidence need not be rerun merely because this protocol
+has been revised. A common source revision or additional replications needed
+for a new aggregate can justify a bounded confirmation; preserve the earlier
+study's interpretation under its original definitions.
+
+### Weight and interpret the results
+
+For each completed correct pair, divide competitor time by TamerOp time.
+Ratios above one favor TamerOp. Select the primary timer before measurement.
+When native construction places useful work on different sides of the query
+boundary, measure construction and query together for the primary comparison.
+Supporting component views do not give that case additional votes.
+
+Give workflow families equal weight unless a real workload distribution
+justifies another choice. Within each family, fix request, field and input
+weights in advance. Additional replications, plot points or correctness controls
+do not increase a family's weight. Report unweighted counts as well.
+
+Preserve absolute times and savings by workflow, field and size, the geometric
+mean with its exact eligible denominator, the largest losses and completion
+rates. Supporting results include the weighted win, similar, loss and unresolved
+shares, a performance profile or equivalent ratio distribution, and fixed
+scaling curves. A performance profile gives the fraction solved within a chosen
+factor of the faster tool; failures remain unsolved. Memory stays outside the
+speed score.
+
+The default practical margin is 10%: a ratio above 1.10 is a point estimate win,
+below 1/1.10 a loss, and between those limits similar performance. Report timing
+uncertainty separately. An interval spanning these regions leaves the
+classification uncertain; the middle region is not a statistical equivalence
+test. For queries near clock resolution, freeze a batch of independent reset
+computations during the pilot or mark the timing unresolved.
+
+The phrase “generally faster on this suite” has a fixed project criterion:
+at least 80% of the original weighted cases are practical wins, at least four
+fifths of workflow families favor TamerOp, and the lower end of the aggregate
+timing interval exceeds 1.10. The conclusion must survive the declared
+pass-range and weight sensitivity checks. This criterion is a project choice;
+failing it changes the conclusion, not the suite.
+
+The full-suite criterion normally requires valid ratios for every primary
+request. Missing or censored ratios require separate completion and completed
+pair results, with a narrower conclusion unless a predeclared conservative
+bound supports the broader statement. A timeout or incorrect answer has no
+exact speed ratio. Keep it in the fixed coverage denominator. An operation
+timeout may support a bound; a whole process timeout cannot be substituted
+into an operation ratio.
+
+### Separate investigation from confirmation
+
+Use development inputs to investigate substantial costs in complete workflows,
+including meaningful batches and repeated use. Record each diagnosed major
+bottleneck, the affected cases, evidence, estimated removable cost, attempted
+changes, checks and before/after results. Reprofile after substantial changes
+and consider the combined opportunity in smaller costs. A small suite weight
+does not make a major loss in one family unimportant.
+
+Freeze the candidate when the remaining diagnosed, feasibly removable costs
+would offer only minor gains in the relevant workflows. There is no prescribed
+number of fixes or optimization cycles. Winning the comparison does not meet
+this stopping condition. If a major cost cannot feasibly be reduced, explain
+why, such as required output work; exhausting a timing budget does not establish
+that the cost is unavoidable. Record small losses accepted for larger gains,
+including any repeated workload that makes a small cost material.
+
+Keep the tasks and size endpoints fixed. Bound each diagnostic run and account
+for its cost separately from confirmation. Evaluate reserved cases after the
+candidate freeze. If evaluation reveals a further feasible major improvement,
+retain those observations and resume the investigation. Viewed performance
+cases cease to be held out; use fresh evaluation cases from the same declared
+families for the revised candidate. Competitor implementations remain unchanged.
+
+### Decide when enough is enough
+
+Close a suite version when its fixed cases have recorded outcomes and correctness
+dispositions, claimed timings satisfy the declared rules, and fixed repetitions
+have finished or reached their recorded limit. Assess reserved cases after the
+freeze, regenerate summaries and failure records, and check reproduction,
+source and input identities and the integrity manifest. Account for every
+diagnosed major bottleneck under the stopping rule above.
+
+Completion can yield favorable, mixed or unresolved performance. A correctness
+defect blocks its affected claim until corrected and checked again. A measurement
+report can close at its budget with a narrower conclusion while a separate
+optimization objective remains unfinished because major feasible improvements
+are still outstanding. Record that distinction explicitly.
+
+Reopen a finished version for a demonstrated validity problem. Use a new version
+for a meaningful implementation change, a new application workload or a larger
+claim. Another possible input size alone does not reopen a completed study.
+
+### Basis for the design
+
+The suite structure draws on [SPEC's account of defined workloads and ratios](https://www.spec.org/cpu2017/Docs/overview.html),
+the [GAP Benchmark Suite for graph processing](https://arxiv.org/abs/1508.03619),
+[Kalibera and Jones on levels of experimental variation](https://kar.kent.ac.uk/33611/),
+[Hoefler and Belli on scientific benchmarking](https://htor.inf.ethz.ch/publications/img/hoefler-scientific-benchmarking.pdf)
+and [Dolan and Moré on performance profiles](https://arxiv.org/abs/cs/0102001).
+The graph benchmark's name is unrelated to the GAP algebra system used by QPA.
+Our numerical design defaults and claim criterion are project decisions;
+these sources supply methods for measurement and interpretation.
 
 ## Define the question and output
 
@@ -575,7 +723,7 @@ Address every diagnosed major TamerOp bottleneck where feasible; there is no
 fixed count of fixes or optimization cycles. Reassess affected workflows until
 remaining diagnosed feasible improvements offer only minor gains, accounting
 for their combined effect. Document major costs that cannot feasibly be reduced.
-Follow the [optimization stopping rule](https://www.tamerop.com/contributing/benchmark_suites.html#separate-investigation-from-confirmation);
+Follow the [optimization stopping rule](#separate-investigation-from-confirmation);
 a timing budget or an aggregate speed win does not by itself complete that work.
 A profile suggests a hypothesis; a controlled before/after experiment tests it.
 Keep fixtures and required outputs fixed. Match each revision to its own usable
@@ -653,8 +801,10 @@ A local ZIP alone does not complete this release process.
 
 ## Study brief and completion checks
 
-Copy this **planning template** into each new study. Unknowns are acceptable
-while planning; keep them visible if still unresolved in the final claim.
+### Reusable suite charter
+
+Use this template to record a new study's agreed scope and measurement rules.
+Keep unresolved scientific questions explicit until the checks settle them.
 
 ```text
 Suite/version, finite scope, deferred overlap and completion rule:
@@ -691,7 +841,7 @@ raw evidence. State limitations from coverage, scale, inspection or activity.
 
 Close the suite when its fixed plan has recorded outcomes, checked claims and
 reproducible evidence. Passing a superiority threshold is a possible conclusion,
-not a completion requirement. Apply the [closure rules](https://www.tamerop.com/contributing/benchmark_suites.html#decide-when-enough-is-enough)
+not a completion requirement. Apply the [closure rules](#decide-when-enough-is-enough)
 before recommending more work or moving to another competitor.
 
 Historical artifacts keep their original definitions. A row named “cold” may
