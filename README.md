@@ -86,3 +86,6 @@ website publishes copies of the historical evidence so a report and its
 downloads remain together. A report identifies the benchmark revision used;
 changes to published inputs, methods or evidence receive a new study version
 instead of replacing old data.
+
+The [changelog](CHANGELOG.md) records new studies, corrections and significant
+changes to measurement procedures or reproduction tools.

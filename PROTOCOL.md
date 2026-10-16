@@ -796,7 +796,8 @@ person or clean environment follow the procedure without developer-local paths.
 Check mathematical outputs exactly where appropriate while recording timing
 variation across hardware. Freeze a release, preferably with a persistent
 archival identifier, and map paper claims to specific result rows. Corrections
-produce a new version with a changelog; old evidence remains identifiable.
+produce a new version with an entry in the [changelog](CHANGELOG.md); old evidence
+remains identifiable.
 A local ZIP alone does not complete this release process.
 
 ## Study brief and completion checks
